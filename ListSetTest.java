@@ -1,13 +1,11 @@
 import de.tudresden.inf.tcs.fcalib.utils.ListSet;
-import junit.framework.TestCase;
 import org.junit.Test;
 
 import java.util.Iterator;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
-public class ListSetTest extends TestCase {
+public class ListSetTest {
     @Test
     public void containsElementTest()
     {
@@ -28,6 +26,7 @@ public class ListSetTest extends TestCase {
         assertFalse(li.contains(10));
 
     }
+
     @Test
     public void listSizeTest()
     {
@@ -63,4 +62,6 @@ public class ListSetTest extends TestCase {
         assertTrue(index == 2);
 
     }
+
+
 }

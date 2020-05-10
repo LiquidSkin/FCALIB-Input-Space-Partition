@@ -1,13 +1,12 @@
 import de.tudresden.inf.tcs.fcalib.FullObjectDescription;
-import junit.framework.TestCase;
 import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.HashSet;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
-public class FullObjectDescriptionTest extends TestCase {
+public class FullObjectDescriptionTest {
     @Test
     public void fullObjectAttributeAbsenceTest()
     {
@@ -83,5 +82,7 @@ public class FullObjectDescriptionTest extends TestCase {
         f.addAttributes(sets);
         assertTrue(!f.containsAttributes(sets2));
     }
+
+
 
 }

@@ -1,13 +1,13 @@
 import de.tudresden.inf.tcs.fcalib.FullObject;
 import de.tudresden.inf.tcs.fcalib.FullObjectDescription;
-import junit.framework.TestCase;
 import org.junit.Test;
 
 import java.util.HashSet;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
-public class FullObjectTest extends TestCase {
+public class FullObjectTest {
+
     @Test
     public void fullObjectPresenceTest()
     {
@@ -39,4 +39,6 @@ public class FullObjectTest extends TestCase {
 
 
     }
+
+
 }

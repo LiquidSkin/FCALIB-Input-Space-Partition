@@ -1,17 +1,13 @@
 import de.tudresden.inf.tcs.fcalib.PartialObjectDescription;
-import junit.framework.TestCase;
 import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
-public class PartialObjectDescriptionTest extends TestCase {
-
-    @Test
-
+public class PartialObjectDescriptionTest {
     public void partialObjectAttributeAbsenceTest()
     {
         Set<Integer> set = new HashSet<Integer>();

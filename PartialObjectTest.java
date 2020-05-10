@@ -1,13 +1,12 @@
 import de.tudresden.inf.tcs.fcalib.PartialObject;
 import de.tudresden.inf.tcs.fcalib.PartialObjectDescription;
-import junit.framework.TestCase;
 import org.junit.Test;
 
 import java.util.HashSet;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
-public class PartialObjectTest extends TestCase {
+public class PartialObjectTest {
     @Test
     public void PartialObjectPresenceTestWithIdentifier()
     {
@@ -59,7 +58,6 @@ public class PartialObjectTest extends TestCase {
 
     }
 
-
     @Test
     public void AttributeNamePresenceTest()
     {
@@ -68,6 +66,21 @@ public class PartialObjectTest extends TestCase {
         p.setName("SampleAttribute");
         String res = p.getName();
         assertTrue(res.equals("SampleAttribute"));
+    }
+    @Test
+    public void AttributeDescriptorTest()
+    {
+        PartialObjectDescription<String> pt = new PartialObjectDescription<String>();
+        HashSet<PartialObjectDescription> set = new HashSet<PartialObjectDescription>();
+        pt.addAttribute("Soft and Smooth");
+        pt.addAttribute("Haste and Waste");
+        set.add(pt);
+        int id = 10;
+        PartialObject p = new PartialObject(id,set);
+        Object ob = p.getDescription();
+        String res = ob.toString();
+        assertTrue(res.contains("Haste and Waste"));
+
     }
 
 }
